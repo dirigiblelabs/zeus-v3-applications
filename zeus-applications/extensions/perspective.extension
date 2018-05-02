@@ -1,0 +1,5 @@
+{
+	"module": "zeus-applications/perspective/applications.js",
+	"extensionPoint": "zeus-perspective",
+	"description": "Applications Perspective"
+}

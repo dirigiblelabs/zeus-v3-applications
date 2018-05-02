@@ -1,0 +1,5 @@
+{
+	"module": "zeus-applications/views/applications/view.js",
+	"extensionPoint": "zeus-view",
+	"description": "Applications View"
+}
