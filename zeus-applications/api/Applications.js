@@ -1,5 +1,5 @@
 var rs = require('http/v3/rs');
-var dao = require('zeus-applications/data/dao/Entity1');
+var dao = require('zeus-applications/data/dao/Applications');
 var http = require('zeus-applications/api/http');
 
 rs.service()
@@ -15,14 +15,14 @@ rs.service()
 			if (entity) {
 			    http.sendResponseOk(entity);
 			} else {
-				http.sendResponseNotFound('Entity1 not found');
+				http.sendResponseNotFound('Applications not found');
 			}
 		})
 	.resource('')
 		.post(function(ctx, request, response) {
 			var entity = request.getJSON();
 			entity.id = dao.create(entity);
-			response.setHeader('Content-Location', '/services/v3/js/zeus-applications/api/Entity1.js/' + entity.id);
+			response.setHeader('Content-Location', '/services/v3/js/zeus-applications/api/Applications.js/' + entity.id);
 			http.sendResponseCreated(entity);
 		})
 	.resource('{id}')
@@ -40,7 +40,7 @@ rs.service()
 				dao.delete(id);
 				http.sendResponseNoContent();
 			} else {
-				http.sendResponseNotFound('Entity1 not found');
+				http.sendResponseNotFound('Applications not found');
 			}
 		})
 .execute();

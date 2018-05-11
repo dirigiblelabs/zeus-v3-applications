@@ -1,12 +1,18 @@
 var daoApi = require('db/v3/dao');
 var dao = daoApi.create({
-	"table": "ENTITY1",
+	"table": "ZEUS_APPLICATIONS",
 	"properties": [
 		{
 			"name": "id",
 			"column": "ENTITY1ID",
 			"type":"INTEGER",
 			"id": true,
+			"required": true
+	},		{
+			"name": "property2",
+			"column": "PROPERTY2",
+			"type":"VARCHAR",
+			"id": false,
 			"required": true
 	}	]
 });

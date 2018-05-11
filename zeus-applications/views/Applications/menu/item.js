@@ -10,8 +10,8 @@
 
 exports.getMenu = function() {
 	return {
-		'id': 'Entity1',
-		'name': 'Entity1',
+		'id': 'Applications',
+		'name': 'Applications',
 		'link': '#',
 		'order': 800
 	};

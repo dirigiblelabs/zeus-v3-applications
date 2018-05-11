@@ -14,7 +14,7 @@
 
 <body ng-controller="PageController">
 	<div class="page-header">
-		<h1>Manage Entity1</h1>
+		<h1>Manage Applications</h1>
 	</div>
 	<div class="container">
 		<button type="button" ng-click="openNewDialog()" class="btn btn-lg btn-primary pull-right">New</button>
@@ -23,6 +23,7 @@
 				<tr>
 					<th>#</th>
 					<th class="text-capitalize">entity1Id</th>
+					<th class="text-capitalize">property2</th>
 					<th></th>
 				</tr>
 			</thead>
@@ -30,6 +31,7 @@
 				<tr ng-repeat="next in data">
 					<td>{{$index + 1}}</td>
 					<td>{{next.entity1Id}}</td>
+					<td>{{next.property2}}</td>
 					<td>
 						<i class="close fa fa-2x fa-remove" ng-click="openDeleteDialog(next)"></i>
 						<i class="close fa fa-2x fa-pencil" ng-click="openEditDialog(next)" style="margin-right: 0.5em"></i>
@@ -52,9 +54,13 @@
 				</div>
 				<div class="modal-body">
 					<form ng-hide="actionType === 'delete'">
+						<div class="form-group">
+							<label>${property.widgetLabel}</label>
+							<input type="TEXTBOX" class="form-control" placeholder="Enter ${property.widgetLabel.toLowerCase()}" ng-model="entity.property2">
+						</div>
 					</form>
 					<div ng-show="actionType === 'delete'">
-						You are going to delete Entity1 with <b>Id = {{entity.id}}</b>.
+						You are going to delete Applications with <b>Id = {{entity.id}}</b>.
 					</div>
 				</div>
 				<div class="modal-footer">

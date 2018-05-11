@@ -10,11 +10,11 @@
 
 exports.getView = function() {
 	return {
-		'id': 'Entity1',
-		'name': 'Entity1',
-		'label': 'Entity1',
+		'id': 'Applications',
+		'name': 'Applications',
+		'label': 'Applications',
 		'factory': 'frame',
 		// 'region': 'center-bottom',
-		'link': '/services/v3/web/zeus-applications/views/Entity1/index.html'
+		'link': '/services/v3/web/zeus-applications/views/Applications/index.html'
 	};
 };

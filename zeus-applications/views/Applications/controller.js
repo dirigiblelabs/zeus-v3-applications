@@ -1,7 +1,7 @@
 angular.module('page', []);
 angular.module('page').controller('PageController', function ($scope, $http) {
 
-	var api = '/services/v3/js/zeus-applications/api/Entity1.js';
+	var api = '/services/v3/js/zeus-applications/api/Applications.js';
 
 	function load() {
 		$http.get(api)
