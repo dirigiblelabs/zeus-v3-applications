@@ -1,0 +1,42 @@
+{
+    "model": {
+        "entities": [
+            {
+                "name": "Entity1",
+                "dataName": "ENTITY1",
+                "isPrimary": "true",
+                "menuKey": "entity1",
+                "menuLabel": "Entity1",
+                "menuIndex": 100,
+                "layoutType": "MANAGE",
+                "properties": [
+                    {
+                        "dataName": "ENTITY1ID",
+                        "name": "entity1Id",
+                        "dataType": "INTEGER",
+                        "dataLength": 0,
+                        "dataDefaultValue": null,
+                        "dataPrimaryKey": "true",
+                        "dataAutoIncrement": "true",
+                        "dataNotNull": "false",
+                        "dataUnique": "false",
+                        "dataPrecision": null,
+                        "dataScale": null,
+                        "relationshipType": null,
+                        "relationshipCardinality": null,
+                        "relationshipName": null,
+                        "widgetType": "TEXTBOX",
+                        "widgetLength": "20",
+                        "widgetLabel": null,
+                        "widgetShortLabel": null,
+                        "widgetPattern": null,
+                        "widgetFormat": null,
+                        "widgetSection": null,
+                        "widgetService": null,
+                        "widgetIsMajor": "true"
+                    }
+                ]
+            }
+        ]
+    }
+}

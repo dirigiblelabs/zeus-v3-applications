@@ -1,0 +1,22 @@
+{
+    "schema": {
+        "structures": [
+            {
+                "name": "ENTITY1",
+                "type": "TABLE",
+                "columns": 
+                [
+                    {
+                        "name": "ENTITY1ID",
+                        "type": "INTEGER",
+                        "length": "0",
+                        "primaryKey": "true",
+                        "identity": "",
+                        "precision": "",
+                        "scale": ""
+                    }
+                ]
+            }
+        ]
+    }
+}

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2018 SAP and others.
+ * Copyright (c) 2017 SAP and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -8,11 +8,13 @@
  * SAP - initial API and implementation
  */
 
-exports.getPerspective = function() {
+exports.getView = function() {
 	return {
-		"name": "Applications",
-		"link": "../zeus-applications/index.html",
-		"order": "0",
-		"image": "ship"
+		'id': 'Entity1',
+		'name': 'Entity1',
+		'label': 'Entity1',
+		'factory': 'frame',
+		// 'region': 'center-bottom',
+		'link': '/services/v3/web/zeus-applications/views/Entity1/index.html'
 	};
 };

@@ -8,13 +8,11 @@
  * SAP - initial API and implementation
  */
 
-exports.getView = function() {
+exports.getMenu = function() {
 	return {
-		'id': 'applications',
-		'name': 'Applications',
-		'factory': 'frame',
-		'region': 'center-bottom',
-		'label': 'Applications',
-		'link': '../zeus-applications/views/applications/index.html'
+		'id': 'Entity1',
+		'name': 'Entity1',
+		'link': '#',
+		'order': 800
 	};
 };

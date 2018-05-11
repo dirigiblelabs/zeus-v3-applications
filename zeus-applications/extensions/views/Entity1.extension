@@ -1,0 +1,5 @@
+{
+	'description': 'Entity1 view',
+	'extensionPoint': 'shell-zeus-applications-view',
+	'module': 'zeus-applications/views/Entity1/view.js'
+}

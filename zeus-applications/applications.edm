@@ -1,0 +1,8 @@
+<model>
+ <entities>
+  <entity name="Entity1" dataName="ENTITY1" isPrimary="true" menuKey="entity1" menuLabel="Entity1" menuIndex="100" layoutType="MANAGE">
+    <property name="entity1Id" dataName="ENTITY1ID" dataType="INTEGER" dataLength="0" dataNullable="false" dataPrimaryKey="true" dataIdentity="true" dataUnique="true" widgetType="TEXTBOX" widgetLength="20" widgetIsMajor="true"></property>
+  </entity>
+ </entities>
+ <mxGraphModel><root><mxCell id="0"/><mxCell id="1" parent="0"/><mxCell id="2" style="entity" vertex="1" parent="1"><Entity name="Entity1" dataName="ENTITY1" menuKey="entity1" menuLabel="Entity1" type="Entity" as="value"/><mxGeometry x="40" y="50" width="200" height="54" as="geometry"><mxRectangle width="200" height="28" as="alternateBounds"/></mxGeometry></mxCell><mxCell id="3" vertex="1" connectable="0" parent="2"><Property name="entity1Id" dataName="ENTITY1ID" dataType="INTEGER" dataLength="0" dataPrimaryKey="true" dataAutoIncrement="true" as="value"/><mxGeometry y="28" width="200" height="26" as="geometry"/></mxCell></root></mxGraphModel>
+</model>
