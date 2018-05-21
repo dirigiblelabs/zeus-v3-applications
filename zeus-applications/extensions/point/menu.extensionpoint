@@ -1,4 +1,0 @@
-{
-	'description': 'Extension Point for the zeus-applications Menu Providers',
-	'name': 'shell-zeus-applications-menu'
-}

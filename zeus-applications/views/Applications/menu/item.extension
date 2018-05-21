@@ -1,5 +1,0 @@
-{
-	'description': 'Applications menu',
-	'extensionPoint': 'shell-zeus-applications-menu',
-	'module': 'zeus-applications/views/Applications/menu/item.js'
-}
