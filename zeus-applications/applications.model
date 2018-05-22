@@ -34,7 +34,7 @@
                         "widgetFormat": null,
                         "widgetSection": null,
                         "widgetService": null,
-                        "widgetIsMajor": false,
+                        "widgetIsMajor": "true",
                         "widgetDropDownKey": null,
                         "widgetDropDownValue": null
                     },
@@ -42,6 +42,7 @@
                         "name": "Template",
                         "dataName": "ZA_TEMPLATE",
                         "dataType": "INTEGER",
+                        "dataLength": "20",
                         "dataDefaultValue": null,
                         "dataPrimaryKey": "false",
                         "dataAutoIncrement": "false",
@@ -69,6 +70,7 @@
                         "name": "Cluster",
                         "dataName": "ZA_CLUSTER",
                         "dataType": "INTEGER",
+                        "dataLength": "20",
                         "dataDefaultValue": null,
                         "dataPrimaryKey": "false",
                         "dataAutoIncrement": "false",
@@ -144,7 +146,7 @@
                         "widgetFormat": null,
                         "widgetSection": null,
                         "widgetService": null,
-                        "widgetIsMajor": false,
+                        "widgetIsMajor": "true",
                         "widgetDropDownKey": null,
                         "widgetDropDownValue": null
                     },
@@ -180,7 +182,7 @@
                         "name": "Image",
                         "dataName": "ZAC_IMAGE",
                         "dataType": "VARCHAR",
-                        "dataLength": "64",
+                        "dataLength": 64,
                         "dataDefaultValue": null,
                         "dataPrimaryKey": "false",
                         "dataAutoIncrement": "false",
@@ -208,6 +210,7 @@
                         "name": "Protocol",
                         "dataName": "ZAC_PROTOCOL",
                         "dataType": "INTEGER",
+                        "dataLength": "20",
                         "dataDefaultValue": null,
                         "dataPrimaryKey": "false",
                         "dataAutoIncrement": "false",
@@ -235,6 +238,7 @@
                         "name": "Port",
                         "dataName": "ZAC_PORT",
                         "dataType": "INTEGER",
+                        "dataLength": "20",
                         "dataDefaultValue": null,
                         "dataPrimaryKey": "false",
                         "dataAutoIncrement": "false",
@@ -282,7 +286,7 @@
                         "widgetFormat": null,
                         "widgetSection": null,
                         "widgetService": null,
-                        "widgetIsMajor": false,
+                        "widgetIsMajor": "false",
                         "widgetDropDownKey": "Id",
                         "widgetDropDownValue": "Id"
                     }
@@ -321,7 +325,7 @@
                         "widgetFormat": null,
                         "widgetSection": null,
                         "widgetService": null,
-                        "widgetIsMajor": false,
+                        "widgetIsMajor": "true",
                         "widgetDropDownKey": null,
                         "widgetDropDownValue": null
                     },
@@ -357,6 +361,7 @@
                         "name": "Protocol",
                         "dataName": "ZAS_PROTOCOL",
                         "dataType": "INTEGER",
+                        "dataLength": "20",
                         "dataDefaultValue": null,
                         "dataPrimaryKey": "false",
                         "dataAutoIncrement": "false",
@@ -384,6 +389,7 @@
                         "name": "Port",
                         "dataName": "ZAS_PORT",
                         "dataType": "INTEGER",
+                        "dataLength": "20",
                         "dataDefaultValue": null,
                         "dataPrimaryKey": "false",
                         "dataAutoIncrement": "false",
@@ -431,7 +437,7 @@
                         "widgetFormat": null,
                         "widgetSection": null,
                         "widgetService": null,
-                        "widgetIsMajor": false,
+                        "widgetIsMajor": "false",
                         "widgetDropDownKey": "Id",
                         "widgetDropDownValue": "Id"
                     }
@@ -470,7 +476,7 @@
                         "widgetFormat": null,
                         "widgetSection": null,
                         "widgetService": null,
-                        "widgetIsMajor": false,
+                        "widgetIsMajor": "true",
                         "widgetDropDownKey": null,
                         "widgetDropDownValue": null
                     },
@@ -506,7 +512,7 @@
                         "name": "Value",
                         "dataName": "ZAV_VALUE",
                         "dataType": "VARCHAR",
-                        "dataLength": "64",
+                        "dataLength": 64,
                         "dataDefaultValue": null,
                         "dataPrimaryKey": "false",
                         "dataAutoIncrement": "false",
@@ -554,7 +560,7 @@
                         "widgetFormat": null,
                         "widgetSection": null,
                         "widgetService": null,
-                        "widgetIsMajor": false,
+                        "widgetIsMajor": "false",
                         "widgetDropDownKey": "Id",
                         "widgetDropDownValue": "Id"
                     }
