@@ -11,8 +11,9 @@
 exports.getPerspective = function() {
 	return {
 		'name': 'Zeus',
+		'image': 'th-large',
+
 		'link': '/services/v3/web/zeus-applications/index.html',
-		'order': '999',
-		'image': 'life-ring'
+		'order': 1,
 	};
 };

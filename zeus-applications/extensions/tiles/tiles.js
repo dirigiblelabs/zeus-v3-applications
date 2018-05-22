@@ -10,8 +10,9 @@
 
 exports.getTile = function() {
 	return {
-		'name': '',
+		'name': 'Applications',
+		'icon': 'th-large',
 		'location': '/services/v3/web/zeus-applications/index.html',
-		'order': 999
+		'order': '1'
 	};
 };
