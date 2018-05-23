@@ -13,7 +13,7 @@
 </head>
 
 <body ng-controller="PageController">
-	<div class="page-header">
+	<div class="page-header container">
 		<h1>Manage Applications</h1>
 	</div>
 	<div class="container">
@@ -22,7 +22,6 @@
 			<thead>
 				<tr>
 					<th>#</th>
-					<th class="text-capitalize">Id</th>
 					<th class="text-capitalize">Template</th>
 					<th class="text-capitalize">Cluster</th>
 					<th></th>
@@ -31,7 +30,6 @@
 			<tbody>
 				<tr ng-repeat="next in data" ng-class="{'bg-info':next && next.Id == selectedEntity.Id}" style="cursor: pointer;" ng-click="selectEntity(next)">
 					<td>{{$index + 1}}</td>
-					<td>{{next.Id}}</td>
 					<td>{{templateOptionValue(next.Template)}}</td>
 					<td>{{clusterOptionValue(next.Cluster)}}</td>
 					<td>
