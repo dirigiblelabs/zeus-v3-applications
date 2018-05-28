@@ -27,7 +27,7 @@
                     {
                         "name": "ZA_TEMPLATE",
                         "type": "INTEGER",
-                        "length": "",
+                        "length": "20",
                         "primaryKey": "false",
                         "identity": "false",
                         "precision": "",
@@ -36,7 +36,7 @@
                     {
                         "name": "ZA_CLUSTER",
                         "type": "INTEGER",
-                        "length": "",
+                        "length": "20",
                         "primaryKey": "false",
                         "identity": "false",
                         "precision": "",
