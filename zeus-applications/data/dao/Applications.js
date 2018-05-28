@@ -9,6 +9,12 @@ var dao = daoApi.create({
 			'id': true,
 			'required': true
 		},		{
+			'name':  'Name',
+			'column': 'ZA_NAME',
+			'type':'VARCHAR',
+			'id': false,
+			'required': true
+		},		{
 			'name':  'Template',
 			'column': 'ZA_TEMPLATE',
 			'type':'INTEGER',
@@ -18,12 +24,6 @@ var dao = daoApi.create({
 			'name':  'Cluster',
 			'column': 'ZA_CLUSTER',
 			'type':'INTEGER',
-			'id': false,
-			'required': true
-		},		{
-			'name':  'Name',
-			'column': 'ZA_NAME',
-			'type':'VARCHAR',
 			'id': false,
 			'required': true
 		}]
