@@ -36,7 +36,7 @@
   <entity name="Endpoints" dataName="ZEUS_APPLICATION_ENDPOINTS" isPrimary="true" menuKey="endpoints" menuLabel="Endpoints" menuIndex="100" layoutType="LIST_DETAILS">
     <property name="Id" dataName="ZAE_ID" dataType="INTEGER" dataLength="0" dataNullable="false" dataPrimaryKey="true" dataAutoIncrement="true" dataUnique="true" widgetType="TEXTBOX" widgetLength="20"></property>
     <property name="URL" dataName="ZAE_URL" dataType="VARCHAR" dataLength="128" dataNullable="false" dataPrimaryKey="true" dataAutoIncrement="true" dataUnique="true" widgetType="TEXTBOX" widgetLength="20" widgetIsMajor="true"></property>
-    <property name="Application" dataName="ZAE_APPLICATION" dataType="INTEGER" dataLength="0" dataNullable="false" dataPrimaryKey="true" dataAutoIncrement="true" dataUnique="true" relationshipType="COMPOSITION" relationshipCardinality="1_n" relationshipName="Endpoints_Applications" widgetType="TEXTBOX" widgetLength="20" widgetIsMajor="true"></property>
+    <property name="Application" dataName="ZAE_APPLICATION" dataType="INTEGER" dataLength="0" dataNullable="false" dataPrimaryKey="true" dataAutoIncrement="true" dataUnique="true" relationshipType="COMPOSITION" relationshipCardinality="1_n" relationshipName="Endpoints_Applications" widgetType="TEXTBOX" widgetLength="20"></property>
   </entity>
   <relation name="Endpoints_Applications" type="relation" entity="Endpoints" relationName="Endpoints_Applications" property="Application" referenced="Applications" referencedProperty="Id">
   </relation>
