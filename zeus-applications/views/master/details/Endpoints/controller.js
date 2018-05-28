@@ -4,7 +4,7 @@ angular.module('page')
 	var messageHub = new FramesMessageHub();
 
 	var message = function(evtName, data){
-		messageHub.post({data: data}, 'zeus.zeus-applications.Services.' + evtName);
+		messageHub.post({data: data}, 'zeus.zeus-applications.Endpoints.' + evtName);
 	};
 
 	var on = function(topic, callback){
@@ -24,7 +24,7 @@ angular.module('page')
 }])
 .controller('PageController', function ($scope, $http, $messageHub) {
 
-	var api = '/services/v3/js/zeus-applications/api/Services.js';
+	var api = '/services/v3/js/zeus-applications/api/Endpoints.js';
 
 	function load() {
 		$http.get(api + '?Application=' + $scope.masterEntityId)

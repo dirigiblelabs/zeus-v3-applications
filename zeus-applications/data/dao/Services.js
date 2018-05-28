@@ -15,9 +15,9 @@ var dao = daoApi.create({
 			'id': false,
 			'required': true
 		},		{
-			'name':  'Protocol',
-			'column': 'ZAS_PROTOCOL',
-			'type':'INTEGER',
+			'name':  'Type',
+			'column': 'ZAS_TYPE',
+			'type':'VARCHAR',
 			'id': false,
 			'required': true
 		},		{

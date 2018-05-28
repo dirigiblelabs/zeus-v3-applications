@@ -8,11 +8,13 @@
  * SAP - initial API and implementation
  */
 
-exports.getTile = function() {
+exports.getView = function() {
 	return {
-		'name': 'Zeus',
-		'icon': 'th-large',
-		'location': '/services/v3/web/zeus-applications/index.html',
-		'order': '1'
+		'id': 'Endpoints',
+		'name': 'Endpoints',
+		'label': 'Endpoints',
+		'factory': 'frame',
+		'region': 'center-bottom',
+		'link': '/services/v3/web/zeus-applications/views/master/details/Endpoints/index.html'
 	};
 };

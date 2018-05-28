@@ -33,20 +33,7 @@ angular.module('page')
 		});
 	}
 
-	$scope.openNewDialog = function() {
-		$scope.actionType = 'new';
-		$scope.entity = {};
-		toggleEntityModal();
-	};
-
-	$scope.openEditDialog = function(entity) {
-		$scope.actionType = 'update';
-		$scope.entity = entity;
-		toggleEntityModal();
-	};
-
-	$scope.openDeleteDialog = function(entity) {
-		$scope.actionType = 'delete';
+	$scope.openInfoDialog = function(entity) {
 		$scope.entity = entity;
 		toggleEntityModal();
 	};
@@ -54,44 +41,6 @@ angular.module('page')
 	$scope.close = function() {
 		load();
 		toggleEntityModal();
-	};
-
-	$scope.create = function() {
-		$scope.entity.Application = $scope.masterEntityId;
-		$http.post(api, JSON.stringify($scope.entity))
-		.success(function(data) {
-			load();
-			toggleEntityModal();
-			$messageHub.messageEntityModified();
-		}).error(function(data) {
-			alert(JSON.stringify(data));
-		});
-			
-	};
-
-	$scope.update = function() {
-		$scope.entity.Application = $scope.masterEntityId;
-
-		$http.put(api + '/' + $scope.entity.Id, JSON.stringify($scope.entity))
-
-		.success(function(data) {
-			load();
-			toggleEntityModal();
-			$messageHub.messageEntityModified();
-		}).error(function(data) {
-			alert(JSON.stringify(data));
-		})
-	};
-
-	$scope.delete = function() {
-		$http.delete(api + '/' + $scope.entity.Id)
-		.success(function(data) {
-			load();
-			toggleEntityModal();
-			$messageHub.messageEntityModified();
-		}).error(function(data) {
-			alert(JSON.stringify(data));
-		});
 	};
 
 

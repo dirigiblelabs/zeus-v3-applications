@@ -20,6 +20,12 @@ var dao = daoApi.create({
 			'type':'INTEGER',
 			'id': false,
 			'required': true
+		},		{
+			'name':  'Name',
+			'column': 'ZA_NAME',
+			'type':'VARCHAR',
+			'id': false,
+			'required': true
 		}]
 });
 

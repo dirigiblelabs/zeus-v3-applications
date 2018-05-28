@@ -14,10 +14,9 @@
 
 <body ng-controller="PageController">
 	<div class="page-header container">
-		<h1>Manage Variables</h1>
+		<h1>Variables</h1>
 	</div>
 	<div class="container">
-		<button type="button" ng-click="openNewDialog()" class="btn btn-lg btn-primary pull-right">New</button>
 		<table class="table product-table">
 			<thead>
 				<tr>
@@ -45,9 +44,7 @@
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h3 ng-show="actionType === 'new'" class="modal-title" id="exampleModalLabel">Create entity</h3>
-					<h3 ng-show="actionType === 'update'" class="modal-title" id="exampleModalLabel">Update entity</h3>
-					<h3 ng-show="actionType === 'delete'" class="modal-title" id="exampleModalLabel">Delete entity</h3>
+					<h3 class="modal-title" id="exampleModalLabel">Entity info</h3>
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					</button>
@@ -56,21 +53,15 @@
 					<form ng-hide="actionType === 'delete'">
 						<div class="form-group">
 							<label>Name</label>
-							<input type="text" class="form-control" placeholder="Enter name" ng-model="entity.Name">
+							<input readonly type="text" class="form-control" placeholder="Enter name" ng-model="entity.Name">
 						</div>
 						<div class="form-group">
 							<label>Value</label>
-							<input type="text" class="form-control" placeholder="Enter value" ng-model="entity.Value">
+							<input readonly type="text" class="form-control" placeholder="Enter value" ng-model="entity.Value">
 						</div>
 					</form>
-					<div ng-show="actionType === 'delete'">
-						You are going to delete <b>Variables</b> with <b>Id = {{entity.Id}}</b>.
-					</div>
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-primary" ng-show="actionType === 'new'" ng-click="create()">Save</button>
-					<button type="button" class="btn btn-primary" ng-show="actionType === 'update'" ng-click="update()">Update</button>
-					<button type="button" class="btn btn-primary" ng-show="actionType === 'delete'" ng-click="delete()">Delete</button>
 					<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
 				</div>
 			</div>

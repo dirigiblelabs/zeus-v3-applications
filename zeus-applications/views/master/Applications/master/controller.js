@@ -32,6 +32,14 @@ angular.module('page')
 
 	$scope.clusterOptions = [];
 
+	function load() {
+		$http.get(api)
+		.success(function(data) {
+			$scope.data = data;
+		});
+	}
+	load();
+
 	function templateOptionsLoad() {
 		$http.get(templateOptionsApi)
 		.success(function(data) {
@@ -48,28 +56,7 @@ angular.module('page')
 	}
 	clusterOptionsLoad();
 
-	function load() {
-		$http.get(api)
-		.success(function(data) {
-			$scope.data = data;
-		});
-	}
-	load();
-
-	$scope.openNewDialog = function() {
-		$scope.actionType = 'new';
-		$scope.entity = {};
-		toggleEntityModal();
-	};
-
-	$scope.openEditDialog = function(entity) {
-		$scope.actionType = 'update';
-		$scope.entity = entity;
-		toggleEntityModal();
-	};
-
-	$scope.openDeleteDialog = function(entity) {
-		$scope.actionType = 'delete';
+	$scope.openInfoDialog = function(entity) {
 		$scope.entity = entity;
 		toggleEntityModal();
 	};
@@ -79,40 +66,6 @@ angular.module('page')
 		toggleEntityModal();
 	};
 
-	$scope.create = function() {
-		$http.post(api, JSON.stringify($scope.entity))
-		.success(function(data) {
-			load();
-			toggleEntityModal();
-			$messageHub.messageEntityModified();
-		}).error(function(data) {
-			alert(JSON.stringify(data));
-		});
-			
-	};
-
-	$scope.update = function() {
-		$http.put(api + '/' + $scope.entity.Id, JSON.stringify($scope.entity))
-
-		.success(function(data) {
-			load();
-			toggleEntityModal();
-			$messageHub.messageEntityModified();
-		}).error(function(data) {
-			alert(JSON.stringify(data));
-		})
-	};
-
-	$scope.delete = function() {
-		$http.delete(api + '/' + $scope.entity.Id)
-		.success(function(data) {
-			load();
-			toggleEntityModal();
-			$messageHub.messageEntityModified();
-		}).error(function(data) {
-			alert(JSON.stringify(data));
-		});
-	};
 	$scope.templateOptionValue = function(optionKey) {
 		for (var i = 0 ; i < $scope.templateOptions.length; i ++) {
 			if ($scope.templateOptions[i].Id === optionKey) {
