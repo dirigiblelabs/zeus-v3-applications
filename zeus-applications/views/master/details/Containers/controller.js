@@ -14,6 +14,9 @@ angular.module('page')
 	return {
 		message: message,
 		on: on,
+		onEntityRefresh: function(callback) {
+			on('zeus.zeus-applications.Containers.refresh', callback);
+		},
 		onApplicationsSelected: function(callback) {
 			on('zeus.zeus-applications.Applications.selected', callback);
 		},
@@ -44,7 +47,7 @@ angular.module('page')
 	};
 
 
-
+	$messageHub.onEntityRefresh(load);
 	$messageHub.onApplicationsSelected(function(event) {
 		$scope.masterEntityId = event.data.id
 		load();

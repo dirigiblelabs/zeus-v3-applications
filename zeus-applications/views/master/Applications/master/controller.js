@@ -14,6 +14,9 @@ angular.module('page')
 	return {
 		message: message,
 		on: on,
+		onEntityRefresh: function(callback) {
+			on('zeus.zeus-applications.Applications.refresh', callback);
+		},
 		messageEntityModified: function() {
 			message('modified');
 		},
@@ -66,6 +69,7 @@ angular.module('page')
 		toggleEntityModal();
 	};
 
+	$messageHub.onEntityRefresh(load);
 	$scope.templateOptionValue = function(optionKey) {
 		for (var i = 0 ; i < $scope.templateOptions.length; i ++) {
 			if ($scope.templateOptions[i].Id === optionKey) {
