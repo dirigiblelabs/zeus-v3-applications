@@ -17,12 +17,6 @@ angular.module('page')
 		onEntityRefresh: function(callback) {
 			on('zeus.zeus-applications.Applications.refresh', callback);
 		},
-		onModified: function(callback) {
-			on('zeus.zeus-applications..modified', callback);
-		},
-		onModified: function(callback) {
-			on('zeus.zeus-applications..modified', callback);
-		},
 		messageEntityModified: function() {
 			message('modified');
 		},
