@@ -94,8 +94,6 @@ angular.module('page')
 		return null;
 	};
 
-	$messageHub.onModified(templateOptionsLoad);
-	$messageHub.onModified(clusterOptionsLoad);
 
 	$scope.selectEntity = function(entity) {
 		$scope.selectedEntity = entity;
