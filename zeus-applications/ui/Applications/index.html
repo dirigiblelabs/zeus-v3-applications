@@ -40,7 +40,7 @@
 
 	<div class="shell">
 		<div class="sidebar list-group" sidebar active="Workbench"></div>
-		<div id="Applications" class="plane" views-layout views-layout-model="layoutModel" views-extension-point="launchpad-Applications-view""></div>
+		<div id="Applications" class="plane" views-layout views-layout-model="layoutModel" views-extension-point="launchpad-zeus-Applications-view""></div>
 	</div>
 	<div class="statusbar" status-bar>${message}</div>
 	
@@ -92,7 +92,7 @@
 				}
 			};
 
-			$http.get('/services/v3/js/zeus/api/launchpad/views.js?extensionPoint=launchpad-Applications-view')
+			$http.get('/services/v3/js/zeus/api/launchpad/views.js?extensionPoint=launchpad-zeus-Applications-view')
 			.success(function(views) {
 				for (var i = 0 ; i < views.length; i ++) {
 					$scope.layoutModel.views.push(views[i].id);

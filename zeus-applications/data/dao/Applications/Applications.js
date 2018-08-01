@@ -1,32 +1,27 @@
 var query = require('db/v3/query');
 var daoApi = require('db/v3/dao');
 var dao = daoApi.create({
-	'table': 'ZEUS_APPLICATION_SERVICES',
+	'table': 'ZEUS_APPLICATIONS',
 	'properties': [
 		{
 			'name': 'Id',
-			'column': 'APPLICATION_SERVICE_ID',
+			'column': 'APPLICATION_ID',
 			'type': 'INTEGER',
 			'id': true,
 			'required': true
 		}, {
 			'name': 'Name',
-			'column': 'APPLICATION_SERVICE_NAME',
+			'column': 'APPLICATION_NAME',
 			'type': 'VARCHAR',
 			'required': true
 		}, {
-			'name': 'Type',
-			'column': 'APPLICATION_SERVICE_TYPE',
-			'type': 'VARCHAR',
-			'required': true
-		}, {
-			'name': 'Port',
-			'column': 'APPLICATION_SERVICE_PORT',
+			'name': 'Template',
+			'column': 'APPLICATION_TEMPLATE',
 			'type': 'INTEGER',
 			'required': true
 		}, {
-			'name': 'Application',
-			'column': 'APPLICATION_SERVICE_APPLICATION',
+			'name': 'Cluster',
+			'column': 'APPLICATION_CLUSTER',
 			'type': 'INTEGER',
 			'required': true
 		}]
@@ -52,6 +47,10 @@ exports.delete = function(id) {
 };
 
 exports.count = function() {
-	var resultSet = query.execute("SELECT COUNT(*) FROM SERVICES");
+	return dao.count();
+};
+
+exports.customDataCount = function() {
+	var resultSet = query.execute("SELECT COUNT(*) AS COUNT FROM ZEUS_APPLICATIONS");
 	return resultSet !== null ? resultSet[0].COUNT : 0;
 };

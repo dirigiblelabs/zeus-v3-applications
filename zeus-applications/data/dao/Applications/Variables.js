@@ -1,27 +1,27 @@
 var query = require('db/v3/query');
 var daoApi = require('db/v3/dao');
 var dao = daoApi.create({
-	'table': 'ZEUS_APPLICATIONS',
+	'table': 'ZEUS_APPLICATION_VARIABLES',
 	'properties': [
 		{
 			'name': 'Id',
-			'column': 'APPLICATION_ID',
+			'column': 'APPLICATION_VARIABLE_ID',
 			'type': 'INTEGER',
 			'id': true,
 			'required': true
 		}, {
 			'name': 'Name',
-			'column': 'APPLICATION_NAME',
+			'column': 'APPLICATION_VARIABLE_NAME',
 			'type': 'VARCHAR',
 			'required': true
 		}, {
-			'name': 'Template',
-			'column': 'APPLICATION_TEMPLATE',
-			'type': 'INTEGER',
+			'name': 'Value',
+			'column': 'APPLICATION_VARIABLE_VALUE',
+			'type': 'VARCHAR',
 			'required': true
 		}, {
-			'name': 'Cluster',
-			'column': 'APPLICATION_CLUSTER',
+			'name': 'Application',
+			'column': 'APPLICATION_VARIABLE_APPLICATION',
 			'type': 'INTEGER',
 			'required': true
 		}]
@@ -47,6 +47,10 @@ exports.delete = function(id) {
 };
 
 exports.count = function() {
-	var resultSet = query.execute("SELECT COUNT(*) AS COUNT FROM ZEUS_APPLICATIONS");
+	return dao.count();
+};
+
+exports.customDataCount = function() {
+	var resultSet = query.execute("SELECT COUNT(*) FROM VARIABLES");
 	return resultSet !== null ? resultSet[0].COUNT : 0;
 };

@@ -38,7 +38,7 @@
 <body ng-app="workbench" ng-controller="WorkbenchController">
 
 	<div class="shell">
-		<div id="zeus-applications-Applications" class="plane plane-inner" views-layout views-layout-model="layoutModel" views-extension-point="launchpad-Applications-Applications-view"></div>
+		<div id="zeus-applications-Applications" class="plane plane-inner" views-layout views-layout-model="layoutModel" views-extension-point="launchpad-zeus-Applications-Applications-view"></div>
 	</div>
 	<!-- div class="statusbar" status-bar>${message}</div -->
 	
@@ -90,7 +90,7 @@
 				}
 			};
 
-			$http.get('/services/v3/js/zeus/api/launchpad/views.js?extensionPoint=launchpad-Applications-Applications-view')
+			$http.get('/services/v3/js/zeus/api/launchpad/views.js?extensionPoint=launchpad-zeus-Applications-Applications-view')
 			.success(function(views) {
 				var master = [];
 				var details = [];

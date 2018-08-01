@@ -27,7 +27,7 @@ angular.module('page')
 }])
 .controller('PageController', function ($scope, $http, $messageHub) {
 
-	var api = '/services/v3/js/zeus-applications/api/Applications.js';
+	var api = '/services/v3/js/zeus-applications/api/Applications/Applications.js';
 	var templateOptionsApi = '/services/v3/js/zeus-templates/api/Templates.js';
 	var clusterOptionsApi = '/services/v3/js/zeus-accounts/api/Clusters.js';
 
@@ -41,13 +41,40 @@ angular.module('page')
 	$scope.dateFormats = ['yyyy/MM/dd', 'dd-MMMM-yyyy', 'dd.MM.yyyy', 'shortDate'];
 	$scope.dateFormat = $scope.dateFormats[0];
 
-	function load() {
-		$http.get(api)
+	$scope.dataPage = 1;
+	$scope.dataCount = 0;
+	$scope.dataOffset = 0;
+	$scope.dataLimit = 10;
+
+	$scope.getPages = function() {
+		return new Array($scope.dataPages);
+	};
+
+	$scope.nextPage = function() {
+		if ($scope.dataPage < $scope.dataPages) {
+			$scope.loadPage($scope.dataPage + 1);
+		}
+	};
+
+	$scope.previousPage = function() {
+		if ($scope.dataPage > 1) {
+			$scope.loadPage($scope.dataPage - 1);
+		}
+	};
+
+	$scope.loadPage = function(pageNumber) {
+		$scope.dataPage = pageNumber;
+		$http.get(api + '/count')
 		.success(function(data) {
-			$scope.data = data;
+			$scope.dataCount = data;
+			$scope.dataPages = Math.ceil($scope.dataCount / $scope.dataLimit);
+			$http.get(api + '?$offset=' + ((pageNumber - 1) * $scope.dataLimit) + '&$limit=' + $scope.dataLimit)
+			.success(function(data) {
+				$scope.data = data;
+			});
 		});
-	}
-	load();
+	};
+	$scope.loadPage($scope.dataPage);
 
 	function templateOptionsLoad() {
 		$http.get(templateOptionsApi)
@@ -71,11 +98,11 @@ angular.module('page')
 	};
 
 	$scope.close = function() {
-		load();
+		$scope.loadPage($scope.dataPage);
 		toggleEntityModal();
 	};
 
-	$messageHub.onEntityRefresh(load);
+	$messageHub.onEntityRefresh($scope.loadPage($scope.dataPage));
 	$scope.templateOptionValue = function(optionKey) {
 		for (var i = 0 ; i < $scope.templateOptions.length; i ++) {
 			if ($scope.templateOptions[i].Id === optionKey) {

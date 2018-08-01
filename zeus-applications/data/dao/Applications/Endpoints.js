@@ -42,6 +42,10 @@ exports.delete = function(id) {
 };
 
 exports.count = function() {
+	return dao.count();
+};
+
+exports.customDataCount = function() {
 	var resultSet = query.execute("SELECT COUNT(*) FROM ENDPOINTS");
 	return resultSet !== null ? resultSet[0].COUNT : 0;
 };
