@@ -10,12 +10,12 @@
 
 var dao = require('zeus-applications/data/dao/Explore/Applications.js')
 
-exports.getTile = function() {
+exports.getTile = function(relativePath) {
 	return {
 		'name': 'Applications',
 		'group': 'Explore',
 		'icon': 'th-large',
-		'location': '/services/v3/web/zeus-applications/ui/Explore/index.html',
+		'location': relativePath + 'services/v3/web/zeus-applications/ui/Explore/index.html',
 		'count': dao.customDataCount(),
 		'order': '100'
 	};

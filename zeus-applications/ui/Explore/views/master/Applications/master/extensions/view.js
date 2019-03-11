@@ -8,7 +8,7 @@
  * SAP - initial API and implementation
  */
 
-exports.getView = function() {
+exports.getView = function(relativePath) {
 	return {
 		'id': 'Applications',
 		'name': 'Applications',
@@ -16,6 +16,6 @@ exports.getView = function() {
 		'factory': 'frame',
 		'region': 'center-top',
 		'type': 'master',
-		'link': '/services/v3/web/zeus-applications/ui/Explore/views/master/Applications/master/index.html'
+		'link': relativePath + 'services/v3/web/zeus-applications/ui/Explore/views/master/Applications/master/index.html'
 	};
 };

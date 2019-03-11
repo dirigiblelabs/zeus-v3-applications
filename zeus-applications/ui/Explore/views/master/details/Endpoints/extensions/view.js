@@ -8,13 +8,13 @@
  * SAP - initial API and implementation
  */
 
-exports.getView = function() {
+exports.getView = function(relativePath) {
 	return {
 		'id': 'Endpoints',
 		'name': 'Endpoints',
 		'label': 'Endpoints',
 		'factory': 'frame',
 		'region': 'center-bottom',
-		'link': '/services/v3/web/zeus-applications/ui/Explore/views/master/details/Endpoints/index.html'
+		'link': relativePath + 'services/v3/web/zeus-applications/ui/Explore/views/master/details/Endpoints/index.html'
 	};
 };

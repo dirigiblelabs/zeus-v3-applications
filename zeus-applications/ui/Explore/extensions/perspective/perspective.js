@@ -8,11 +8,11 @@
  * SAP - initial API and implementation
  */
 
-exports.getPerspective = function() {
+exports.getPerspective = function(relativePath) {
 	return {
 		'name': 'Explore',
 		'image': 'th-large',
-		'link': '/services/v3/web/zeus-applications/ui/Explore/index.html',
+		'link': relativePath + 'services/v3/web/zeus-applications/ui/Explore/index.html',
 		'order': 100,
 	};
 };
