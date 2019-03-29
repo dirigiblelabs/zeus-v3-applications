@@ -1,4 +1,4 @@
-var rs = require('http/v3/rs');
+var rs = require('http/v4/rs');
 var dao = require('zeus-applications/data/dao/Explore/Variables');
 var http = require('zeus-applications/api/http');
 
